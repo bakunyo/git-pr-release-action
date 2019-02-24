@@ -18,17 +18,11 @@ action "Filter branch" {
 action "git-pr-release" {
   uses = "bakunyo/git-pr-release-action@master"
   needs = ["Filter branch"]
-  secrets = [
-    "GIT_PR_RELEASE_TOKEN",
-    "GITHUB_TOKEN",
-  ]
+  secrets = ["GITHUB_TOKEN"]
 }
 ```
 
 ### Secrets(required)
-#### `GIT_PR_RELEASE_TOKEN`
-Add [GIT_PR_RELEASE_TOKEN](https://github.com/motemen/git-pr-release#pr-releasetoken) as [secret](https://developer.github.com/actions/creating-workflows/storing-secrets/#storing-secrets) to create pull request.
-
 #### `GITHUB_TOKEN`
 Add [GITHUB_TOKEN secret](https://developer.github.com/actions/creating-workflows/storing-secrets/#github-token-secret) to make authenticated calls to the GitHub API.
 
