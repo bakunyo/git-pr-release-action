@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: git-pr-release
-        uses: bakunyo/git-pr-release-action@change-format
+        uses: bakunyo/git-pr-release-action@develop
         env:
           GIT_PR_RELEASE_BRANCH_STAGING: develop
           GITHUB_TOKEN: ${{ secrets.GIT_PR_TOKEN }}
