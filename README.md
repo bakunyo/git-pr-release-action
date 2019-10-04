@@ -21,7 +21,7 @@ jobs:
     - name: git-pr-release
       uses: bakunyo/git-pr-release-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GIT_PR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 or see `.github/workflows` of this repository.
