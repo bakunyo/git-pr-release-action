@@ -1,7 +1,8 @@
-FROM ruby:2.6.5-alpine3.10
+FROM ruby:3.0.0-alpine3.13
 
-RUN apk add --no-cache git
-RUN gem install git-pr-release
+RUN apk --update --no-cache upgrade && \
+    apk --no-cache add git tzdata && \
+    gem install --no-document git-pr-release
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
