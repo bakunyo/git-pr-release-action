@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+      with:
+        fetch-depth: 0
     - name: git-pr-release
       uses: bakunyo/git-pr-release-action@master
       env:
