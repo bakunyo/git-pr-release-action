@@ -1,9 +1,16 @@
 name: "git-pr-release"
 description: "Run git-pr-release"
 author: "bakunyo <izuta.hiroyuki@gmail.com>"
+inputs:
+  args:
+    description: "Specify the arguments to the git-pr-release command"
+    required: false
+    default: ''
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.args }}
 branding:
   icon: "check-square"
   color: "green"
