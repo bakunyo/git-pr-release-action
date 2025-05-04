@@ -12,6 +12,8 @@ on:
   push:
     branches:
       - staging
+permissions:
+  pull-requests: write
 jobs:
   gitPrRelease:
     name: git-pr-release
